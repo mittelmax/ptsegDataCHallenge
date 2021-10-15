@@ -12,7 +12,17 @@ Este repositório contém minha solução para o Porto Seguro Data Challenge, qu
 Meu foco principal durante o desafio foi o de implementar uma estratégia de Stacking. Esta foi a primeira vez que me aventurei com Ensemble Learning, e portanto busquei utilizar tal oportunidade como um incentivo para me familiarizar com tal técnica.
 
 ## `Requisitos`
-Para a execução de minhha estratégia utilizei os seguintes pacotes:
+Para a execução de minhha estratégia utilizei os seguintes pacotes disponíveis no arquivo `requirements.txt`.
+* catboost==0.26
+* lightgbm==3.3.0
+* numpy==1.21.2
+* optuna==2.10.0
+* pandas==1.3.3
+* pathlib==1.0.1
+* scikit-learn==1.0
+* xgboost==1.4.2
+#### `Disclaimer`
+As versões mais recentes do Catboost apresentam um problema que impede a utilização do parâmetro `class_weights` com a métrica de Loss F1. Dessa forma, para a execução da solução é necessário que se realize um downgrade do pacote para a versão 0.26.
 
 ## `Estrutura do Repositório`
 Aqui está um resumo da estrutura deste repositório. Minha solução original foi construída com base numa série de notebooks do Kaggle. Dessa forma, este repositório é uma implementação alternativa de minha solução, em que me empenhei para tornar mais organizada e reprodutível.
@@ -21,13 +31,6 @@ Aqui está um resumo da estrutura deste repositório. Minha solução original f
   * `ptsegDataChallenge/`
     * __init__.py
     * config.py
-  * `data/`
-    * `raw/`
-    * `preproc/`
-    * `tuningBase/`
-    * `tuningStacked/`
-    * `basePreds/`
-    * `finalPredictions/`
   * `dataPreprocessing/`
     * preprocV1.py
   * `baseModels/`
@@ -58,3 +61,12 @@ Aqui está um resumo da estrutura deste repositório. Minha solução original f
   * `stackedModel/`
       * predictionStackedLightGBM.py
       * tuningStackedLightGBM.py
+  * `README.md`
+  * `requirements.txt`
+  * `data/`
+    * `raw/`
+    * `preproc/`
+    * `tuningBase/`
+    * `tuningStacked/`
+    * `basePreds/`
+    * `finalPredictions/`
