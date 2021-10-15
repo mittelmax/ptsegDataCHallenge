@@ -11,6 +11,9 @@ Este repositório contém minha solução para o Porto Seguro Data Challenge, qu
 ## `Metodologia e Objetivo`
 Meu foco principal durante o desafio foi o de implementar uma estratégia de Stacking. Esta foi a primeira vez que me aventurei com Ensemble Learning, e portanto busquei utilizar tal oportunidade como um incentivo para me familiarizar com tal técnica.
 
+## `Requisitos`
+Para a execução de minhha estratégia utilizei os seguintes pacotes:
+
 ## `Estrutura do Repositório`
 Aqui está um resumo da estrutura deste repositório. Minha solução original foi construída com base numa série de notebooks do Kaggle. Dessa forma, este repositório é uma implementação alternativa de minha solução, em que me empenhei para tornar mais organizada e reprodutível.
 
