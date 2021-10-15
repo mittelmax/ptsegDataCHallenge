@@ -73,3 +73,10 @@ Os scripts estão enumerados de acordo com a ordem de preferência na execução
     * `tuningStacked/`
     * `basePreds/`
     * `finalPredictions/`
+   
+#### Agora vamos analisar melhor o funcionamento de cada uma das partes do repositório
+## `ptsegDataChallenge/`
+  * `ptsegDataChallenge/`
+    * __init__.py
+    * config.py
+
