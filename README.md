@@ -25,7 +25,7 @@ Para a execução de minhha estratégia utilizei os seguintes pacotes disponíve
 As versões mais recentes do Catboost apresentam um problema que impede a utilização do parâmetro `class_weights` com a métrica de Loss F1. Dessa forma, para a execução da solução é necessário que se realize um downgrade do pacote para a versão 0.26.
 
 ## `Estrutura do Repositório`
-Aqui está um resumo da estrutura deste repositório. Minha solução original foi construída com base numa série de notebooks do Kaggle. Dessa forma, este repositório é uma implementação alternativa de minha solução, em que me empenhei para tornar mais organizada e reprodutível.
+Aqui está um resumo da estrutura deste repositório. Minha solução original foi construída com base numa série de notebooks do Kaggle. Dessa forma, este repositório é uma implementação alternativa de minha solução, em que me empenhei para tornar mais organizada e reprodutível. Os scripts estão enumerados de acordo com o a ordem de preferência na execução. Arquivos que comecem com o mesmo número podem ser executados paralelamente. Os scrits referentes à otimização de hiperparâmetros não foram enumerados uma vez que sua execução é opcional, podendo-se utilizar os parâmetros que já estão salvos no repositório.
 
 * `ptsegDataChallenge/`
   * `ptsegDataChallenge/`
