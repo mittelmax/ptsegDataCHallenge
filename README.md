@@ -74,7 +74,7 @@ Os scripts estão enumerados de acordo com a ordem de preferência na execução
     * `basePreds/`
     * `finalPredictions/`
    
-#### Agora vamos analisar melhor o funcionamento de cada uma das partes do repositório
+Agora vamos analisar melhor o funcionamento de cada uma das partes do repositório
 ## `ptsegDataChallenge/`
   * `ptsegDataChallenge/`
     * __init__.py
