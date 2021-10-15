@@ -32,34 +32,34 @@ Aqui está um resumo da estrutura deste repositório. Minha solução original f
     * __init__.py
     * config.py
   * `dataPreprocessing/`
-    * preprocV1.py
+    * 0_preprocV1.py
   * `baseModels/`
     * `tuning/`
       * tuningCatboostBase.py
       * tuningLightGBMBase.py
       * tuningXGBoostBase.py
     * `oofPredictions/`
-      * oofPredsBernNB.py
-      * oofPredsCatboost.py
-      * oofPredsJoin.py
-      * oofPredsKNN.py
-      * oofPredsLightGBM.py
-      * oofPredsLogreg.py
-      * oofPredsRandomForest.py
-      * oofPredsSVC.py
-      * oofPredsXGBoost.py
+      * 1_oofPredsBernNB.py
+      * 1_oofPredsCatboost.py
+      * 1_oofPredsKNN.py
+      * 1_oofPredsLightGBM.py
+      * 1_oofPredsLogreg.py
+      * 1_oofPredsRandomForest.py
+      * 1_oofPredsSVC.py
+      * 1_oofPredsXGBoost.py
+      * 2_oofPredsJoin.py
     * `basePredictions/`
-      * basePredsBernNB.py
-      * basePredsCatboost.py
-      * basePredsJoin.py
-      * basePredsKNN.py
-      * basePredsLightGBM.py
-      * basePredsLogreg.py
-      * basePredsRandomForest.py
-      * basePredsSVC.py
-      * basePredsXGBoost.py
+      * 3_basePredsBernNB.py
+      * 3_basePredsCatboost.py
+      * 3_basePredsKNN.py
+      * 3_basePredsLightGBM.py
+      * 3_basePredsLogreg.py
+      * 3_basePredsRandomForest.py
+      * 3_basePredsSVC.py
+      * 3_basePredsXGBoost.py
+      * 4_basePredsJoin.py
   * `stackedModel/`
-      * predictionStackedLightGBM.py
+      * 5_predictionStackedLightGBM.py
       * tuningStackedLightGBM.py
   * `README.md`
   * `requirements.txt`
