@@ -74,9 +74,11 @@ Os scripts estão enumerados de acordo com a ordem de preferência na execução
     * `basePreds/`
     * `finalPredictions/`
    
-Agora vamos analisar melhor o funcionamento de cada uma das partes do repositório
+Agora vamos analisar melhor o funcionamento de cada uma das partes do repositório:
 ## `ptsegDataChallenge/`
   * `ptsegDataChallenge/`
     * __init__.py
     * config.py
+
+Esta pasta, com o mesmo nome do repositório, atua como um pacote de Pyhton que contém as configurações do projeto. Neste caso específico, o script config.py contém o path do diretório data, onde estão alocados os datasets de treino e teste e também aqruivos referentes à minha solução.
 
