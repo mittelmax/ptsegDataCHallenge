@@ -95,7 +95,7 @@ Agora vamos analisar melhor o funcionamento de cada uma das partes do repositór
     * __init__.py
     * config.py
 
-Esta pasta, com o mesmo nome do repositório, atua como um pacote de Pyhton que contém as configurações do projeto. Neste caso específico, o script config.py contém o path do diretório `data` que deve ser inserido pelo usuário, onde estão alocados os datasets de treino e teste e também arquivos referentes à minha solução.
+Esta pasta, com o mesmo nome do repositório, atua como um pacote de Pyhton que contém as configurações do projeto. Neste caso específico, o script config.py contém o path do diretório `data/` que deve ser inserido pelo usuário, onde estão alocados os datasets de treino e teste e também arquivos referentes à minha solução.
 
 ```python
 from pathlib import Path
