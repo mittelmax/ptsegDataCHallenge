@@ -21,6 +21,7 @@ Para a execução de minhha estratégia utilizei os seguintes pacotes disponíve
 * pathlib==1.0.1
 * scikit-learn==1.0
 * xgboost==1.4.2
+
 #### `Disclaimer`
 As versões mais recentes do Catboost apresentam um problema que impede a utilização do parâmetro `class_weights` com a métrica de Loss F1. Dessa forma, para a execução da solução é necessário que se realize um downgrade do pacote para a versão 0.26.
 
@@ -80,5 +81,71 @@ Agora vamos analisar melhor o funcionamento de cada uma das partes do repositór
     * __init__.py
     * config.py
 
-Esta pasta, com o mesmo nome do repositório, atua como um pacote de Pyhton que contém as configurações do projeto. Neste caso específico, o script config.py contém o path do diretório data, onde estão alocados os datasets de treino e teste e também aqruivos referentes à minha solução.
+Esta pasta, com o mesmo nome do repositório, atua como um pacote de Pyhton que contém as configurações do projeto. Neste caso específico, o script config.py contém o path do diretório `data` que deve ser inserido pelo usuário, onde estão alocados os datasets de treino e teste e também arquivos referentes à minha solução.
+
+```python
+from pathlib import Path
+
+# Use this variable to insert the path to your data directory
+# This variable will be avaiable to all python scripts
+data_dir = Path("/path to the data folder")
+```
+
+## `dataPreprocessing/`
+  * `dataPreprocessing/`
+    * 0_preprocV1.py
+
+Esta pasta contém os scripts referentes ao pré-processamento dos dados. Testei muitas técnicas em minha solução sem obter nenhhum ganho de performance. A única estratégia que rendeu alguma melhora foi substituir os valores `-999` por `np.nan`.
+
+## `baseModels`
+  * `baseModels/`
+    * `tuning/`
+      * tuningCatboostBase.py
+      * tuningLightGBMBase.py
+      * tuningXGBoostBase.py
+    * `oofPredictions/`
+      * 1_oofPredsBernNB.py
+      * 1_oofPredsCatboost.py
+      * 1_oofPredsKNN.py
+      * 1_oofPredsLightGBM.py
+      * 1_oofPredsLogreg.py
+      * 1_oofPredsRandomForest.py
+      * 1_oofPredsSVC.py
+      * 1_oofPredsXGBoost.py
+      * 2_oofPredsJoin.py
+    * `basePredictions/`
+      * 3_basePredsBernNB.py
+      * 3_basePredsCatboost.py
+      * 3_basePredsKNN.py
+      * 3_basePredsLightGBM.py
+      * 3_basePredsLogreg.py
+      * 3_basePredsRandomForest.py
+      * 3_basePredsSVC.py
+      * 3_basePredsXGBoost.py
+      * 4_basePredsJoin.py
+
+Esta pasta contém todo o código referente aos modelos da camada base de meu ensemble, estando dividida em 3 partes:
+
+* `tuning/` - Contém os scripts referentes à otimização de hiperparâmetros do `XGBoost`, `Catboost` e `LightGBM`
+* `oofPredictions/` - Contém os scripts referentes às previsões out-of-fold dos modelos da camada base do ensemble
+* `basePredictions/` - Contém os scripts referentes às previsões finais para cada um dos modelos base do ensemble, que serão utilizadas para a previsão final
+
+## `stackedModel`
+  * `stackedModel/`
+      * 5_predictionStackedLightGBM.py
+      * tuningStackedLightGBM.py
+
+Esta pasta contem os scipts de otimização de parâmetros e tambbém da previsão final do meta-modelo de stacking, isto é, o modelo que tem como input as previsões dos modelos base.
+
+## `data/`
+  * `data/`
+    * `raw/`
+    * `preproc/`
+    * `tuningBase/`
+    * `tuningStacked/`
+    * `basePreds/`
+    * `finalPredictions/`
+
+É a pasta que contém os inputs e outputs dos modelos. Os dados originais da competição devem ser incluídos na pasta `raw/`. Na pasta `preproc/` armazena-se o output do pré-processamento da base original. Já nas demais pastas, armazena-se informaçÕes referentes à otimização de hiperparâmetros e as previsões dos modelos base e do modelo final.
+
 
