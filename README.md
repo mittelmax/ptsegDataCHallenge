@@ -167,5 +167,5 @@ Durante o processo de transformação da minha solução final feita em notebook
 Durante a previsão out-of-fold do `Support Vector Classifier`, acabei utilizando o `Random Forest` como modelo. Dessa forma, na previsão final da competição acabei utilizando duas vezes as previsões do `Random Forest`no modelo final. Este erro está corrigido neste repositório. Observei ganhos de performance ao comparar este modelo revisado com o original.
 
 ## `Conclusões`
-Sou muito grato à oportunidade de aprendizagem proporcionada por esta competição. Fico muito feliz em ter implementado uma solução de stacking pela primeira vez e também por ter terminado entre os 3 melhores colocados de minha divisão. Deixo aqui meus agradecimentos à Porto Seguro pela oportunidade proporcionada!
+Sou muito grato à oportunidade de aprendizagem proporcionada por esta competição. Fico muito feliz em ter implementado uma solução de stacking pela primeira vez e também por ter terminado entre os 3 melhores colocados de minha divisão. Deixo aqui novamente meus agradecimentos à Porto Seguro pela oportunidade proporcionada!
 
