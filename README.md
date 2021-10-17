@@ -9,7 +9,21 @@
 Este repositório contém minha solução para o Porto Seguro Data Challenge, que terminou a competetição em terceiro lugar na divisão universitária. A página e leaderboard oficiais estão disponíveis no Kaggle através [deste link](https://www.kaggle.com/c/porto-seguro-data-challenge). Gostaria de ressaltar o grande aprendizado que esta competição me proporcionou, uma vez que busquei aprender e utilizar técnicas fora de minha zona de conforto. Por fim também gostaria de parabenizar a todos os demais participantes por suas soluções, e também à Porto Seguro pela oportunidade proporcionada.
 
 ## `Metodologia e Objetivo`
-Meu foco principal durante o desafio foi o de implementar uma estratégia de Stacking. Esta foi a primeira vez que me aventurei com Ensemble Learning, e portanto busquei utilizar tal oportunidade como um incentivo para me familiarizar com tal técnica.
+Meu foco principal durante o desafio foi o de implementar uma estratégia de Stacking. Esta foi a primeira vez que me aventurei com Ensemble Learning, e portanto busquei utilizar tal oportunidade como um incentivo para me familiarizar com tal técnica. 
+\
+\
+Foram utilizados 8 modelos base:
+* `LightGBM`
+* `XGBoost`
+* `Catboost`
+* `Random Forest`
+* `Support Vector Classifier`
+* `Bernoulli Naive Bayes`
+* `Logistic Regression`
+* `K Nearest Neighbours Classifier`
+
+E como meta-modelo utilizou-se novamente o `LightGBM`
+
 
 ## `Requisitos`
 Para a execução de minhha estratégia utilizei os seguintes pacotes disponíveis no arquivo `requirements.txt`.
@@ -148,4 +162,10 @@ Esta pasta contem os scipts de otimização de parâmetros e tambbém da previs�
 
 É a pasta que contém os inputs e outputs dos modelos. Os dados originais da competição devem ser incluídos na pasta `raw/`. Na pasta `preproc/` armazena-se o output do pré-processamento da base original. Já nas demais pastas, armazena-se informaçÕes referentes à otimização de hiperparâmetros e as previsões dos modelos base e do modelo final.
 
+## `Observação`
+Durante o processo de transformação da minha solução final feita em notebooks do Kaggle para este repositório, percebi a existência de um erro no código:
+Durante a previsão out-of-fold do `Support Vector Classifier`, acabei utilizando o `Random Forest` como modelo. Dessa forma, na previsão final da competição acabei utilizando duas vezes as previsões do `Random Forest`no modelo final. Este erro está corrigido neste repositório. Observei ganhos de performance ao comparar este modelo revisado com o original.
+
+## `Conclusões`
+Sou muito grato à oportunidade de aprendizagem proporcionada por esta competição. Fico muito feliz em ter implementado uma solução de stacking pela primeira vez e também por ter terminado entre os 3 melhores colocados de minha divisão. Deixo aqui meus agradecimentos à Porto Seguro pela oportunidade proporcionada!
 
