@@ -140,9 +140,9 @@ Esta pasta contém os scripts referentes ao pré-processamento dos dados. Testei
 
 Esta pasta contém todo o código referente aos modelos da camada base de meu ensemble, estando dividida em 3 partes:
 
-* `tuning/` - Contém os scripts referentes à otimização de hiperparâmetros do `XGBoost`, `Catboost` e `LightGBM`
-* `oofPredictions/` - Contém os scripts referentes às previsões out-of-fold dos modelos da camada base do ensemble
-* `basePredictions/` - Contém os scripts referentes às previsões finais para cada um dos modelos base do ensemble, que serão utilizadas para a previsão final
+* `tuning/`: Contém os scripts referentes à otimização de hiperparâmetros do `XGBoost`, `Catboost` e `LightGBM`
+* `oofPredictions/`: Contém os scripts referentes às previsões out-of-fold dos modelos da camada base do ensemble
+* `basePredictions/`: Contém os scripts referentes às previsões finais para cada um dos modelos base do ensemble, que serão utilizadas para a previsão final
 
 ## `stackedModel`
   * `stackedModel/`
