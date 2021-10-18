@@ -152,7 +152,7 @@ Esta pasta contém todo o código referente aos modelos da camada base de meu en
       * featuresBoruta.py
       * tuningBoruta.py
 
-Esta pasta contém scripts relacionados ao processo de feature selection com o pacote Boruta. Como os resultados não foram promissores, acabei não utilizando apenas as variáveis selecionadas pelo boruta no modelo final. De todo modo, decidi deixar tal código disponível aqui.
+Esta pasta contém scripts relacionados ao processo de feature selection com o pacote Boruta. Como os resultados não foram promissores, acabei não utilizando apenas as variáveis selecionadas pelo Boruta no modelo final. De todo modo, decidi deixar tal código disponível aqui.
 
 ## `stackedModel`
   * `stackedModel/`
