@@ -76,6 +76,9 @@ Os scripts estão enumerados de acordo com a ordem de preferência na execução
       * 3_basePredsSVC.py
       * 3_basePredsXGBoost.py
       * 4_basePredsJoin.py
+  * `boruta/`
+      * featuresBoruta.py
+      * tuningBoruta.py
   * `stackedModel/`
       * 5_predictionStackedLightGBM.py
       * tuningStackedLightGBM.py
@@ -143,6 +146,13 @@ Esta pasta contém todo o código referente aos modelos da camada base de meu en
 * `tuning/`: Contém os scripts referentes à otimização de hiperparâmetros do `XGBoost`, `Catboost` e `LightGBM`
 * `oofPredictions/`: Contém os scripts referentes às previsões out-of-fold dos modelos da camada base do ensemble
 * `basePredictions/`: Contém os scripts referentes às previsões finais para cada um dos modelos base do ensemble, que serão utilizadas para a previsão final
+
+## `boruta/`
+  * `boruta/`
+      * featuresBoruta.py
+      * tuningBoruta.py
+
+Esta pasta contém scripts relacionados ao procesos de features selection com o pacote Boruta. Como os resultados não foram promissores, acabei não utilizando apenas as variáveis selecionadas pelo boruta no modelo final. De todo modo, decidi deixar tal código disponível aqui.
 
 ## `stackedModel`
   * `stackedModel/`
